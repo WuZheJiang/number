@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number">
+    <script>
+        document.querySelector('input').onchange = (e) => {
+            let str = e.target.value, old = str[str.length - 1], str2 = ''
+            for (let i = 0; i < 10; i++) {
+                if (i != old)
+                    str2 += 'https://wa.me/' + str.replace(/[0-9]$/, i) + (i == 9 ? '' : '\n')
+            }
+            console.log(str2);
+        } 
+    </script>
+</body>
+
+</html>
