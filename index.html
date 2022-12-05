@@ -10,7 +10,8 @@
 
 <body>
     <input type="number">
-    <textarea></textarea>
+    <br>
+    <textarea style="margin-top: 10px;" cols="30" rows="15" ></textarea>
     <script>
         document.querySelector('input').onchange = (e) => {
             let str = e.target.value, old = str[str.length - 1], str2 = ''
@@ -19,7 +20,7 @@
                     str2 += 'https://wa.me/' + str.replace(/[0-9]$/, i) + (i == 9 ? '' : '\n')
             }
             document.querySelector('textarea').value = str2
-            console.log(str2);
+            // console.log(str2);
         } 
     </script>
 </body>
